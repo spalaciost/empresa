@@ -24,37 +24,37 @@ public class Ejemplo {
                 + "participar en las votaciones");
         int tamanomaximo =teclado.nextInt();
         edad= new int[tamanomaximo];
-        estadoCivil= new int[tamanomaximo]
-        calificacion= new int[tamanomaximo]
+        estadoCivil= new int[tamanomaximo];
+        calificacion= new int[tamanomaximo];
         
         while(centinela==true){
             opcion=menu()
         if(opcion==1){
-            if(personasingresadas<=tamanomaxiomo){
-                votacion=ingresarvotacion()
+            if(personasIngresadas<=tamanomaximo){
+                votacion=ingresarvotacion();
                     votacion[0] =edad[personasIngresadas];
                     votacion[1] = estadoCivil[personasIngresadas];
                     votacion[2] = calificacion[personasIngresadas];
-                    personasingresadas=personasIngresadas+1;
+                    personasIngresadas=personasIngresadas+1;
                 }else{
                     System.out.println("Ya participaron todos las personas posibles");}
         }else{
             if(opcion==2){
                 System.out.println("Sobre que estado civil desea hacer el filtro");
-                filtroEstadoCivil=teclado.nextint().
+                filtroEstadoCivil=teclado.nextInt();
                         
                 System.out.println("Sobre que rango de edad desea hacer el filtro");
-                filtroEdad=teclado.nextint().
+                filtroEdad=teclado.nextInt();
                         
                 ReporteParcial(edad,estadoCivil,calificacion,personasIngresadas-1
-                        ,filtroEdad,filtroEstadoCivil)
+                        ,filtroEdad,filtroEstadoCivil);
                 }else{
-                ReporteFinal(calificacion,personasIngresadas-1)
+                ReporteFinal(calificacion,personasIngresadas-1);
             }
         }
-            System.out.println("Si desea finalizar presione 0, para continuar presione 1")
-                    indicador=teclado.nextInt();
-                    if(indicador=0){
+            System.out.println("Si desea finalizar presione 0, para continuar presione 1");
+                    int indicador=teclado.nextInt();
+                    if(indicador==0){
                     centinela=false;
                     }
         }
@@ -72,7 +72,7 @@ public class Ejemplo {
         return opcion;
       
     } 
-    public static void reporteparcial(int[]edad, int[]estadoCivil, int[]calificacion,
+    public static void ReporteParcial(int[]edad, int[]estadoCivil, int[]calificacion,
             int tamano, int filtroEdad, int filtroEstadoCivil ){
         System.out.println("reporte parcial");
         int total=0;
@@ -89,7 +89,7 @@ public class Ejemplo {
                 +" Personas con Estado Civil " + filtroEstadoCivil + " Y en rango de edad de "
                 + filtroEdad + " con promedio total de " + promedio);
     }
-    public static void reportefinal(int[]calificacion, int tamano ){
+    public static void ReporteFinal(int[]calificacion, int tamano ){
         System.out.println("reporte final");
         int total=0;
         int i=1;
