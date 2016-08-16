@@ -10,7 +10,7 @@
  */
 public class Ejemplo {
  
-    public static void main(string[] args){
+    public static void main(String[] args){
         boolean centinela=true;
         int opcion=0, filtroEdad=0, filtroEstadoCivil=0;
         int votacion[]=null;
@@ -28,7 +28,7 @@ public class Ejemplo {
         calificacion= new int[tamanomaximo];
         
         while(centinela==true){
-            opcion=menu()
+            opcion =menu();
         if(opcion==1){
             if(personasIngresadas<=tamanomaximo){
                 votacion=ingresarvotacion();
@@ -61,7 +61,7 @@ public class Ejemplo {
         System.out.println("Se ha finalizado la ejecución del proceso de elecciones");
     }
         
-    public static int[] menu(){
+    public static int menu(){
            
         int maxpersonasvotacion=0;
       java.util.Scanner teclado=
